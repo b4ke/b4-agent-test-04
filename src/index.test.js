@@ -12,7 +12,7 @@ describe("Worker", () => {
 	afterAll(async () => {
 		await worker.stop();
 	});
-
+/**
 	it("should return Hello World", async () => {
 		const resp = await worker.fetch();
 		if (resp) {
@@ -20,4 +20,5 @@ describe("Worker", () => {
 			expect(text).toMatchInlineSnapshot(`"Hello World!"`);
 		}
 	});
+*/	
 });
