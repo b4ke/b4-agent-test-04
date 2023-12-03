@@ -1,0 +1,3 @@
+name = "b4-agent-test-04"
+main = "src/index.js"
+compatibility_date = "2023-12-03"
