@@ -28,13 +28,12 @@ export default {
 		const response = await fetch(endpoint, init);
 		const content = await response.json();
 	
-		html_content += `<p>weather by geo</p>`;
-		html_content += `located at: ${latitude},${longitude}.</p>`;
-		html_content += `<p>sensor data from <a href="${content.data.city.url}">${content.data.city.name}</a>:</p>`;
-		html_content += `<p>${content.data.aqi} _:AQI</p>`;
-		html_content += `<p>${content.data.iaqi.no2?.v} _:N02</p>`;
-		html_content += `<p>${content.data.iaqi.o3?.v} _:O3</p>`;
-		html_content += `<p>${content.data.iaqi.t?.v}°C _:TMP</p>`;
+		html_content += `#loc @ ${latitude},${longitude}.</p>`;
+		html_content += `<p>#data @ <a href="${content.data.city.url}">${content.data.city.name}</a>:</p>`;
+		html_content += `<p>_AQI: ${content.data.aqi}</p>`;
+		html_content += `<p>_N02: ${content.data.iaqi.no2?.v}</p>`;
+		html_content += `<p>_O3:  ${content.data.iaqi.o3?.v}</p>`;
+		html_content += `<p>_TMP: ${content.data.iaqi.t?.v}°C</p>`;
 	
 		let html = `
 		  <!DOCTYPE html>
